@@ -1,0 +1,27 @@
+name: pangeo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6
+  - cytoolz
+  - dask=0.17.1
+  - distributed=1.21.1
+  - fastparquet
+  - ipywidgets
+  - jupyterlab
+  - matplotlib
+  - nb_conda_kernels
+  - netcdf4
+  - nomkl
+  - numba
+  - numcodecs
+  - numpy
+  - pandas
+  - python-blosc
+  - scipy
+  - scikit-image
+  - xarray
+  - zict
+  - zarr
+  - gcfs
