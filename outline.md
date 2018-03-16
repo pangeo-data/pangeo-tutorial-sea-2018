@@ -22,7 +22,7 @@
     1. Dask Collections (`array`, `bag`, and `dataframe`)
     1. Dask Schedulers
   1. Dask and Xarray
-    1. Parallel/sreaming/lazy computation using `dask.array`
+    1. Parallel/streaming/lazy computation using `dask.array`
     1. Reading and writing data
   1. Automatic parallelization with `xarray.apply_ufunc`
   1. Distributed scheduler for HPC and cloud computing environments
