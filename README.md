@@ -12,6 +12,8 @@ This repository contains materials for the Pangeo Tutorial [Atmospheric data ana
 
 This tutorial is designed to run on the [Cheyenne High-Performance Computer](https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne), [Pangeo's JupyterHub deployed on Google Compute Platform](http://pangeo.pydata.org/), or on a local computer (see *Running Locally* below). The larger sample datasets are only be available on GCP and Cheyenne but smaller versions of the same datasets can be downloaded from this link ([TODO]) when running locally.
 
+For detailed setup instructions, see [setup.md](./setup.md).
+
 ### Running Locally
 
 ```

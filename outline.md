@@ -16,6 +16,10 @@
         1. Integration with Matplotlib
         1. Making Maps with Cartopy
         1. Bokeh/Holoviews/Geoviews
+    1. Input and Output
+        1. NetCDF 3/4
+        1. RasterIO
+        1. Zarr
 1. **Dask**
     1. Dynamic task scheduling
         1. Task graphs and Dask Delayed
