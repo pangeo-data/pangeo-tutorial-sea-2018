@@ -23,8 +23,8 @@
 1. **Dask**
     1. Dynamic task scheduling
         1. Task graphs and Dask Delayed
-        1. Dask Collections (`array`, `bag`, and `dataframe`)
         1. Dask Schedulers
+        1. Dask Collections (`array`, `bag`, and `dataframe`)
     1. Dask and Xarray
         1. Parallel/streaming/lazy computation using `dask.array`
         1. Reading and writing data
