@@ -22,7 +22,8 @@
         1. Zarr
 1. **Dask**
     1. Dynamic task scheduling
-        1. Task graphs and Dask Delayed
+        1. Dask Delayed
+        1. Task graphs
         1. Dask Schedulers
         1. Dask Collections (`array`, `bag`, and `dataframe`)
     1. Dask and Xarray
