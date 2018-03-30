@@ -25,3 +25,4 @@ dependencies:
   - zict
   - zarr
   - gcfs
+  - python-graphviz
