@@ -4,10 +4,7 @@ This repository contains materials for the Pangeo Tutorial [Atmospheric data ana
 
 ## Front Matter
 
-<img src="./images/pangeo_card_green.png" width="150">
-<img src="./images/xarray.png" width="125">
-<img src="./images/dask.png" width="100">
-<img src="./images/jupyter.png" width="50">
+<img src="./images/pangeo_card_green.png" width="150"> <img src="./images/xarray.png" width="125"> <img src="./images/dask.png" width="100"> <img src="./images/jupyter.png" width="50">
 
 -----
 
