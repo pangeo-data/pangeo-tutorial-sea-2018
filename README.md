@@ -1,12 +1,15 @@
 # Pangeo Tutorial for 2018 UCAR SEA Conference
 
-Pangeo                     |  Xarray | Dask | Jupyter
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](images/pangeo_card_green.png)  |  ![](images/xarray.png) | ![](images/dask.png) | ![](images/jupyter.png)
-
 This repository contains materials for the Pangeo Tutorial [Atmospheric data analysis with Dask and Xarray](https://sea.ucar.edu/event/atmospheric-data-analysis-dask-and-xarray) that will be presented at the 2018 UCAR Software Engineering Assembly.
 
 ## Front Matter
+
+<img src="./images/pangeo_card_green.png" width="150">
+<img src="./images/xarray.png" width="125">
+<img src="./images/dask.png" width="100">
+<img src="./images/jupyter.png" width="50">
+
+-----
 
 - **[About Pangeo](https://pangeo-data.github.io/):** Pangeo is a community effort for big data in the geosciences using Python. A key component of the Pangeo effort is the improved integration of [Xarray](http://xarray.pydata.org/en/latest/index.html) and [Dask](http://dask.pydata.org/en/latest/index.html) to enamble analysis of very large datasets.
 - **[About Xarray](http://xarray.pydata.org/en/latest/index.html):** xarray is an open source project and Python package that aims to bring the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures.
