@@ -32,13 +32,15 @@ This notebooks in this tutorial are designed to run on the Cheyenne High-Perform
 #### Install the necessary Jupyter Plugins
 
     $ jupyter labextension install jupyterlab_bokeh
-    
+
 #### Run a quick test
 
     $ python
 
     >>> import xarray as xr
     >>> xr.show_versions()  
+    >>> xr.tutorial.load_dataset('air_temperature')
+    >>> xr.tutorial.load_dataset('rasm')
 
 
 ## Launching Jupyter locally
