@@ -23,6 +23,8 @@ This notebooks in this tutorial are designed to run on the Cheyenne High-Perform
 
 #### Install Pangeo Environment
 
+*This step can take some time.  If it fails, just run it again and it will pick up where it left off.*
+
     $ conda env create --file environment.yml
 
 #### Activate the Pangeo Environment
@@ -55,7 +57,8 @@ This notebooks in this tutorial are designed to run on the Cheyenne High-Perform
 
   1. Launching jupyter lab requires a few extra steps
 
-         $ qinteractive -l walltime=4:00:00
+         $ export PBS_ACCOUNT=STDD0006
+         $ qinteractive -l walltime=4:00:00 
          $ start-notebook
 
 ## Access to Pangeo on Google Cloud
@@ -65,4 +68,10 @@ We are running a JupyterHub on Google Compute Platform. To access this service:
   - Authenticate with your GitHub Account. If you don't have a Github Account, go here first: https://github.com/join
   - Open a new terminal using the jupyer lab interface
   - Clone this repository
+        
         git clone https://github.com/pangeo-data/pangeo-tutorial-sea-2018.git tutorial
+  
+  - The base conda environment has most of what we need but you may want to add a few packages, from within your terminal, run:
+        
+        conda install -c conda-forge cartopy holoviews geoviews graphviz=2.38.0 xorg-libxrender xorg-libxpm
+        jupyter labextension install jupyterlab_bokeh
