@@ -28,3 +28,4 @@ dependencies:
   - python-graphviz
   - holoviews
   - geoviews
+  - nodejs
