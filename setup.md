@@ -64,3 +64,6 @@ We are running a JupyterHub on Google Compute Platform. To access this service:
   - Open a new terminal using the jupyer lab interface
   - Clone this repository
         git clone https://github.com/pangeo-data/pangeo-tutorial-sea-2018.git tutorial
+  - The base conda environment has most of what we need but you may want to add a few packages, from within your terminal, run:
+        conda install -c conda-forge cartopy holoviews geoviews graphviz=2.38.0 xorg-libxrender xorg-libxpm
+        jupyter labextension install jupyterlab_bokeh
