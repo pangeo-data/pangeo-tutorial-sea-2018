@@ -25,11 +25,14 @@ This notebooks in this tutorial are designed to run on the Cheyenne High-Perform
 
     $ conda env create --file environment.yml
 
-
 #### Activate the Pangeo Environment
 
     $ source activate pangeo
 
+#### Install the necessary Jupyter Plugins
+
+    $ jupyter labextension install jupyterlab_bokeh
+    
 #### Run a quick test
 
     $ python

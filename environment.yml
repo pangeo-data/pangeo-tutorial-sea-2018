@@ -26,4 +26,6 @@ dependencies:
   - zarr
   - gcsfs
   - python-graphviz
+  - holoviews
+  - geoviews
   - nodejs
