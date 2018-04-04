@@ -10,5 +10,3 @@ python -c "from xarray.tutorial import load_dataset; ds = load_dataset('rasm')" 
 python -c "from xarray.tutorial import load_dataset; ds = load_dataset('air_temperature')" &
 
 wait
-
-#
