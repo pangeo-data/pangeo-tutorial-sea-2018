@@ -58,7 +58,8 @@ This notebooks in this tutorial are designed to run on the Cheyenne High-Perform
   1. Launching jupyter lab requires a few extra steps
 
          $ export PBS_ACCOUNT=STDD0006
-         $ qinteractive -l walltime=4:00:00 
+         $ qinteractive -l walltime=4:00:00
+         $ source activate pangeo
          $ start-notebook
 
 ## Access to Pangeo on Google Cloud
