@@ -15,7 +15,7 @@ This repository contains materials for the Pangeo Tutorial [Atmospheric data ana
 
 ## Setup
 
-This tutorial is designed to run on the [Cheyenne High-Performance Computer](https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne), [Pangeo's JupyterHub deployed on Google Compute Platform](http://pangeo.pydata.org/), or on a local computer (see *Running Locally* below). The larger sample datasets are only be available on GCP and Cheyenne but smaller versions of the same datasets can be downloaded from this link ([TODO]) when running locally.
+This tutorial is designed to run on the [Cheyenne High-Performance Computer](https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne), [Pangeo's JupyterHub deployed on Google Compute Platform](http://pangeo.pydata.org/), or on a local computer (see *Running Locally* below). The larger sample datasets may only be available on GCP and/or Cheyenne.
 
 For detailed setup instructions, see [setup.md](./setup.md).
 
@@ -38,6 +38,10 @@ jupyter lab
 
 At its core, Pangeo is a community effort built around open-source software. As such, the credit for the developments of the software described here belongs with the community that created it. Ryan Abernathey and Matt Rocklin provided resources and input specific to this tutorial.
 
+Elements of this tutorial were taken from the Xarray, Dask, Cartopy, Holoviews, and Geoviews documentation. Some pieces of text in the Xarray portion of the tutorial were adapted from Hoyer and Hamman (2016).
+
 Pangeo is [supported](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1740633&HistoricalAwards=false) by the [National Science Foundation (NSF)](https://www.nsf.gov/) and the [EarthCube Program](https://www.earthcube.org/). NCAR is separately supported by the [National Science Foundation (NSF)](https://www.nsf.gov/).
 
 Google provided compute credits on [Google Compute Engine](https://cloud.google.com/), which are used to back the Pangeo GCP deployment.
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

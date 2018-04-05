@@ -1,7 +1,7 @@
 Getting Started with Pangeo
 ===============
 
-This notebooks in this tutorial are designed to run on the Cheyenne High-Performance Computer, Pangeo's JupyterHub deployed on Google Compute Platform, or on a local computer (see Running Locally below). The larger sample datasets are only be available on GCP and Cheyenne but smaller versions of the same datasets can be downloaded from this link ([TODO]) when running locally.
+This notebooks in this tutorial are designed to run on the Cheyenne High-Performance Computer, Pangeo's JupyterHub deployed on Google Compute Platform, or on a local computer (see Running Locally below). Most of the datasets used in the tutorial are small and are packaged with xarray. The larger sample datasets may only be available on GCP and/or Cheyenne.
 
 ## Setup Python for working on a personal computer or on Cheyenne
 
@@ -69,10 +69,10 @@ We are running a JupyterHub on Google Compute Platform. To access this service:
   - Authenticate with your GitHub Account. If you don't have a Github Account, go here first: https://github.com/join
   - Open a new terminal using the jupyer lab interface
   - Clone this repository
-        
+
         git clone https://github.com/pangeo-data/pangeo-tutorial-sea-2018.git tutorial
-  
+
   - The base conda environment has most of what we need but you may want to add a few packages, from within your terminal, run:
-        
+
         conda install -c conda-forge cartopy holoviews geoviews graphviz=2.38.0 xorg-libxrender xorg-libxpm
         jupyter labextension install jupyterlab_bokeh
