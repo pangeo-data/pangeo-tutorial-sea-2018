@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# This start notebook file specific for the pangeo workshop. edit as you
+# see fit for more general use
+
+# Make sure the pysumma environment is active. If not tell the user to start
+# it first
+if [[ $CONDA_DEFAULT_ENV != pangeo ]];
+then
+	echo "Activate the pangeo environment before running this script."
+	echo "You can do so by typing:"
+	echo ""
+	echo "source activate pangeo"
+	echo ""
+	echo "on the command line."
+	exit ;
+fi
+
+# Create trap to kill notebook when user is done
+kill_server() {
+	if [[ $JNPID != -1 ]]; then
+    	echo -en "\nKilling Jupyter Notebook Server with PID=$JNPID ... "
+		kill $JNPID
+		echo "done"
+		exit 0
+	else
+		exit 1
+	fi
+}
+
+JNPID=-1
+trap kill_server SIGHUP SIGINT SIGTERM
+
+# get available port
+DASK_PORT=8787
+LOCALHOST_PORT=8888
+
+
+# Begin server creation
+JNHOST=$(hostname)
+LOGDIR=/glade/scratch/${USER}/.jupyter-notebook
+LOGFILE=${LOGDIR}/log.$(date +%Y%m%dT%H%M%S)
+mkdir -p $LOGDIR
+
+if [[ $JNHOST == ch* || $JNHOST == r* ]]; then
+	STHOST=cheyenne
+else
+	STHOST=$JNHOST
+fi
+
+echo "Logging this session in $LOGFILE"
+
+jupyter notebook $@ --no-browser --ip=$JNHOST  >& $LOGFILE &
+JNPID=$!
+
+echo -en  "\nStarting jupyter notebook server, please wait ... "
+
+ELAPSED=0
+ADDRESS=
+
+while [[ $ADDRESS != *"${JNHOST}"* ]]; do
+    sleep 1
+    ELAPSED=$(($ELAPSED+1))
+		ADDRESS=$(grep -e '^\[.*\]\s*http://.*:.*/\?token=.*' $LOGFILE | head -n 1 | awk -F'//' '{print $NF}')
+
+    if [[ $ELAPSED -gt 30 ]]; then
+        echo -e "something went wrong\n---"
+        cat $LOGFILE
+        echo "---"
+        kill_server
+    fi
+done
+
+
+echo -e "done\n---\n"
+
+HOST=$(echo $ADDRESS | awk -F':' ' { print $1 } ')
+PORT=$(echo $ADDRESS | awk -F':' ' { print $2 } ' | awk -F'/' ' { print $1 } ')
+TOKEN=$(echo $ADDRESS | awk -F'=' ' { print $NF } ')
+
+
+cat << EOF
+Run the following command on your desktop or laptop:
+
+    ssh -N -l $USER -L ${LOCALHOST_PORT}:${JNHOST}:$PORT ${STHOST}.ucar.edu
+
+Log in with your YubiKey/Cryptocard (there will be no prompt).
+Then open a browser and go to http://localhost:${LOCALHOST_PORT}. The Jupyter web
+interface will ask you for a token. Use the following:
+
+    $TOKEN
+
+Note that anyone to whom you give the token can access (and modify/delete)
+files in your GLADE spaces, regardless of the file permissions you
+have set. SHARE TOKENS RARELY AND WISELY!
+
+To stop the server, press Ctrl-C.
+EOF
+
+# Wait for user kill command
+sleep inf
