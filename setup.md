@@ -59,6 +59,7 @@ This notebooks in this tutorial are designed to run on the Cheyenne High-Perform
 
          $ export PBS_ACCOUNT=STDD0006
          $ qinteractive -l walltime=4:00:00
+         $ export LD_LIBRARY_PATH=
          $ source activate pangeo
          $ start-notebook
 
