@@ -28,7 +28,7 @@ This notebooks in this tutorial are designed to run on the Cheyenne High-Perform
     
 #### Install Pangeo Environment
 
-*This step can take some time.  If it fails, just run it again and it will pick up where it left off.*
+*This step can take some time.  If it fails, just run it again and it will pick up where it left off.  Don't worry about any warnings that it gives during the install.*
 
     $ conda env create --file environment.yml
 
