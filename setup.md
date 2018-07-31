@@ -21,6 +21,11 @@ This notebooks in this tutorial are designed to run on the Cheyenne High-Perform
     $ bash miniconda.sh
     # follow instructions
 
+#### Clone the tutorial repository
+
+    $ git clone https://github.com/NCAR/pangeo-tutorial-august-2018
+    $ cd pangeo-tutorial-august-2018
+    
 #### Install Pangeo Environment
 
 *This step can take some time.  If it fails, just run it again and it will pick up where it left off.*
